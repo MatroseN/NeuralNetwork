@@ -13,8 +13,8 @@ class NeuralNetwork:
         self.learnRate = learningRate
 
         # Weights
-        self.wih = (numpy.random.rand(self.hidNodes, self.inNodes) - 0.5)
-        self.who = (numpy.random.rand(self.outNodes, self.hidNodes) - 0.5)
+        self.wih = numpy.random.normal(0.0, pow(self.hidNodes, -0.5), (self.hidNodes, self.inNodes))
+        self.who = numpy.random.normal(0.0, pow(self.outNodes, -0.5), (self.outNodes, self.hidNodes))
         pass
 
     def train(self):
