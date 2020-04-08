@@ -6,6 +6,6 @@ outNodes = 3
 
 learnRate = 0.3
 
-neuralNet = NeuralNetwork(inNodes, hidNodes, outNodes, learnRate)
+neuralNet = NeuralNetwork.NeuralNetwork(inNodes, hidNodes, outNodes, learnRate)
 
-
+print(neuralNet.query([1.0, 0.5, -1.5]))
